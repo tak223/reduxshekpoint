@@ -15,10 +15,10 @@ export const addtask = (newtask) => {
         payload : task,
     }
  }
- export const edittask = (task) => {
+ export const edittask = (edettask) => {
     return{
         type :EDITTASK,
-        payload:task,
+        payload:edettask,
     } 
 
   }

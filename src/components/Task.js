@@ -36,7 +36,7 @@ const delite = (e) => {
     <div className='tasks'>
       <output className='input' > { task.discription }</output>
     <label className='tin text'> is the task done ?</label>
-    <input type="checkbox"   onClick={checkboxChange}  />   
+    <input type="checkbox"   onClick={checkboxChange}  defaultChecked = {inputTask.isdone} />   
     <FaTrashRestoreAlt  onClick={delite} className='tin'/>
     
     <EditTask id={task.id}  isdone={task.isdone}/>

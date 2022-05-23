@@ -2,7 +2,7 @@ import { ADDTASK, EDITTASK, FILTERTASKES, DELETETASK } from "../actionTypes/acti
 
 
 const initialState = {
-    searchtask:'',
+   filterStatue:'all',
    list : [
     {
         id: Math.random() ,
@@ -22,9 +22,9 @@ const initialState = {
     switch (type) {
         case ADDTASK: return {...state, list:[...state.list,payload]}
         case EDITTASK: return  {...state, list:state.list.map((el,i)=>  el.id == payload.id ? {...el,...payload} : el )}; 
-        case DELETETASK:return { ...state,list:state.list.filter((el)=> el.id !== payload.id) }
+        case DELETETASK:return { ...state,list:state.list.filter((el)=> el.id !== payload.id && el) }
 
-        case FILTERTASKES: return{...state,searchtask:payload}
+        case FILTERTASKES: return{...state, filterStatue:payload}
         default: return state;
            
     }

@@ -1,8 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom';
+import React from 'react';
 import Modal from 'react-modal';
 import {useState} from 'react';
-import{dispatch, useDispatch} from  "react-redux";
+import{ useDispatch} from  "react-redux";
 import { edittask } from './../js/action/action';
 import { FaEdit ,FaCheck,FaTimes} from "react-icons/fa";
 

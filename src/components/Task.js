@@ -29,7 +29,7 @@ const delite = (e) => {
   e.preventDefault();
   dispatch(deletetask(inputTask)) ;
 }
-console.log(task.isdone);
+
    
  
   return (
@@ -37,7 +37,7 @@ console.log(task.isdone);
       <output className='input' > { task.discription }</output>
     <label className='tin text'> is the task done ?</label>
     <input type="checkbox"   onClick={checkboxChange}  />   
-    <FaTrashRestoreAlt  onClick={delite}  className='tin'/>
+    <FaTrashRestoreAlt  onClick={delite} className='tin'/>
     
     <EditTask id={task.id}  isdone={task.isdone}/>
  
